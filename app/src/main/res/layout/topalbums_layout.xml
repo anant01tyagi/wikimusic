@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/topAlbumsLinearLayout">
+
+
+    <ImageView
+        android:id="@+id/ImageThumb"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:clickable="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/albumTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:text="Album"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/albumArtist"
+            android:text="artist"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5sp"
+            android:textAlignment="center"
+            android:clickable="false"
+            android:textSize="20sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

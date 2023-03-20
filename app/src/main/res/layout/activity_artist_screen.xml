@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".artistScreen">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/artistImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:text="Name"
+            android:textSize="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="70sp"
+            android:layout_marginTop="50sp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:shadowRadius="5"
+            android:shadowColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/playCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="110sp"
+            android:text="Play Count"
+           />
+
+        <TextView
+            android:id="@+id/playCountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="5sp"
+            android:text="26999999"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_below="@id/playCountTV"
+            />
+
+        <TextView
+            android:id="@+id/followersTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300sp"
+            android:layout_marginTop="110sp"
+            android:text="Followers"/>
+
+        <TextView
+            android:id="@+id/followersValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26999999"
+            android:layout_marginLeft="300sp"
+            android:layout_marginTop="5sp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_below="@+id/followersTV"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistGenreRV"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+   <ScrollView
+       android:layout_width="wrap_content"
+       android:layout_height="100sp"
+       app:layout_constraintTop_toBottomOf="@+id/artistGenreRV"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:id="@+id/Scrollview">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistDescription"
+        app:layout_constraintTop_toBottomOf="@+id/artistGenreRV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Description"/>
+   </ScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistTopAlbumsTV"
+        app:layout_constraintTop_toBottomOf="@id/Scrollview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Top Albums"
+        android:textStyle="bold"
+        android:layout_marginTop="5sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistTopAlbumsRV"
+        app:layout_constraintTop_toBottomOf="@id/artistTopAlbumsTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistTopTracksTV"
+        android:text="Top Tracks"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/artistTopAlbumsRV"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistTopTracksRV"
+        app:layout_constraintTop_toBottomOf="@id/artistTopTracksTV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
